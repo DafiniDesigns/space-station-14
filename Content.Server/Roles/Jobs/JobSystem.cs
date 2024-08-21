@@ -49,4 +49,9 @@ public sealed class JobSystem : SharedJobSystem
 
         _roles.MindAddRole(mindId, new JobComponent { Prototype = jobPrototypeId });
     }
+
+    internal IEnumerable<object> GetAllJobs()
+    {
+        throw new NotImplementedException();
+    }
 }
