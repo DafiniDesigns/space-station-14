@@ -1,0 +1,42 @@
+- type: job
+  id: Jester
+  name: job-name-jester
+  description: job-description-jester
+  playTimeTracker: JobJester
+  startingGear: JesterGear
+  icon: "JobIconClown"
+  supervisors: job-supervisors-hop
+  access:
+  - Theatre
+  - Maintenance
+  special:
+  - !type:AddComponentSpecial
+    components:
+    - type: Clumsy
+      clumsyDamage:
+        types: #literally just picked semi random valus. i tested this once and tweaked it.
+          Blunt: 5
+          Piercing: 4
+        groups:
+          Burn: 3
+    - type: SleepEmitSound
+      snore: /Audio/Voice/Misc/silly_snore.ogg
+      interval: 10
+  - !type:AddImplantSpecial
+    implants: [ SadTromboneImplant ]
+
+- type: startingGear
+  id: JesterGear
+  equipment:
+    mask: ClothingMaskClown
+    head: ClothingHeadHatJester
+    shoes: ClothingShoesJester
+    jumpsuit: ClothingUniformJumpsuitJester
+    pocket1: HandBell
+    pocket2: ClownRecorder
+    id: JesterPDA
+    ears: ClothingHeadsetService
+  storage:
+    back:
+    - RubberStampClown
+    - CrayonRainbow
