@@ -198,6 +198,18 @@
       - state: clown
 
 - type: entity
+  id: SpawnPointJester
+  parent: SpawnPointJobBase
+  name: clown
+  components:
+  - type: SpawnPoint
+    job_id: Jester
+  - type: Sprite
+    layers:
+      - state: green
+      - state: clown
+
+- type: entity
   id: SpawnPointMime
   parent: SpawnPointJobBase
   name: mime
