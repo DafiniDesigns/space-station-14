@@ -1,0 +1,45 @@
+- type: entity
+  parent: BaseItem
+  id: HandBonk
+  name: hand bonk
+  description: oh no.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/desk_bell.rsi
+    state: "normal"
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessSound:
+      collection: DeskBell
+    params:
+      variation: 0.03
+      volume: 10
+  - type: EmitSoundOnUse
+    sound:
+      collection: DeskBell
+      params:
+          variation: 0.03
+          volume: 10
+  - type: EmitSoundOnTrigger
+    sound:
+      collection: DeskBell
+      params:
+          variation: 0.03
+          volume: 10
+  - type: EmitSoundOnLand
+    sound:
+      collection: DeskBell
+      params:
+          variation: 0.03
+          volume: 10
+  - type: UseDelay
+    delay: 0.01
+  - type: MeleeWeapon
+    soundHit:
+      collection: DeskBell
+      params:
+          variation: 0.03
+          volume: 10
+    damage:
+      types:
+        Blunt: 100
